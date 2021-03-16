@@ -1,0 +1,174 @@
+nav{
+    background: #1a1a1a;
+    padding-left: 4%;
+    padding-right: 5%;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+
+.psStyle{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+    border-radius: 500px;
+}
+.psStyle{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+  border-radius: 500px;
+}
+#psOneStyle{
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(https://thumbs.gfycat.com/SecondhandTerribleChafer-small.gif);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+#psTwoStyle{
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(https://thumbs.gfycat.com/SilkyLongGermanshorthairedpointer-max-1mb.gif);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+#pspStyle{
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.wallpapersafari.com/43/52/OQ7Lix.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+#ps3Style{
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://www.picgifs.com/games-gifs/games-gifs/console-playstation-3/picgifs-console-playstation-3-0306776.gif);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+#psVitaStyle{
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.wallpapersafari.com/45/92/GXk9Lf.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+#ps4Style{
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://res.cloudinary.com/practicaldev/image/fetch/s--veS09c0c--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/a79p4ddf652wvsi8lv1y.gif);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+#ps5Style{
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.vox-cdn.com/thumbor/YOdHJmlMPRTi5okQzn69j4x1FPc=/63x0:738x450/1310x873/cdn.vox-cdn.com/uploads/chorus_image/image/66934584/ps5OS.5.gif);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+.psText{
+  font-size: 1.5rem!important;
+}
+.psText{
+  font-size: 1.5rem!important;
+}
+.cardStyle{
+border-radius: 50px!important;  
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+  background: linear-gradient(-35deg,#a3a3a3,#b5b3b3,#c9c9c9,#d1d1d1,#dbdbdb,#e0e0e0,#ebebeb,#fcfcfc);
+background-size: 400%;
+animation-delay: 0s;
+animation: change 5s ease-in-out infinite;  
+}
+.cardImg{
+  border-radius: 50px;
+}
+.body-style{
+  background: linear-gradient(-45deg,#ffffff,#f5f5f5,#e3e3e3,#d4d4d4,#c9c9c9,#bababa);
+  background-size: 400%;
+  animation-delay: 0s;
+  animation: change 10s ease-in-out infinite;
+}
+#galleryBody{
+background-color: #0a0a0a
+}
+#galleryHeader{
+background: linear-gradient(-45deg,#000000,#00123d,#001a59,#002275,#00298c,#0030a3,#0035b3,#002782,#001f66,#001647,#000b24,#00030a);
+background-size: 400%;
+animation-delay: 0s;
+animation: change 3s ease-in-out infinite;  
+}
+#headerBar{
+  border-bottom-left-radius: 50px!important;
+  border-bottom-right-radius: 50px!important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+}
+#galleryCard{
+  background-color: #000000;
+}
+.cardBtn{
+border-radius: 80px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+background-color: #b3b3b3!important;
+border: 0px;
+}
+.cardBtn:hover{
+  background: linear-gradient(-45deg,#000000,#00123d,#001a59,#002275,#00298c,#0030a3,#0035b3,#002782,#001f66,#001647,#000b24,#00030a);;
+  background-size: 400%;
+  animation-delay: 0s;
+  animation: change 5s ease-in-out infinite;  
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  color: white!important;
+  transition: 0.5s;
+  transition-delay:0.1s;
+  transform: scale(1.2);
+}
+#cookieBar{
+  background-color:#424242!important;
+  color:white!important;
+}
+#cookieBtn{
+  border-radius: 70px;
+  margin:1%;
+  background-color:#a8a8a8!important;
+}
+#cookieBtn:hover{
+  background: linear-gradient(-35deg,#363636,#4f4f4f,#5e5e5e,#707070,#808080,#949292,#a8a8a8);
+  background-size: 400%;
+  animation-delay: 0s;
+  animation: change 5s ease-in-out infinite;  
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  color: white!important;
+  transition: 0.5s;
+  transition-delay:0.1s;
+  transform: scale(1.2);  
+}
+@keyframes change {
+  0%{
+      background-position: 0 50%;
+  }
+  50%{
+      background-position: 100% 50%; 
+  }
+  100%{
+      background-position: 0 50%; 
+  }
+}
+@media(max-width: 992px) {
+.cardBtn{
+  font-size:2vw!important;
+}
+}
+@media(max-width: 992px) {
+  .cardBtn{
+    font-size: 1rem!important;
+  }
+  .cardTitleStyle{
+    font-size: 1rem!important;
+  }
+}
+@media(max-width:768px){
+.cardBtn{
+  font-size: 1.5em!important;
+   }
+   .cardTitleStyle{
+    font-size: 1.7rem!important;
+  }
+}
