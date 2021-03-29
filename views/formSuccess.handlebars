@@ -1,11 +1,20 @@
+    <div class="container-fluid">
    <div class="row no-gutters carousel-bg">
     <div class="col-md-5 sm-3">
-      <img src="Images/psMail.jpg" class="card-img carousel-img mt-5 mb-5" alt="PS_Mail">
+      <img src="/images/psMail.jpg" class="card-img carousel-img mt-5 mb-5" alt="kid_with_tiger_plushy" id="aboutUsImg">
     </div>
-    <div class="col-md-7 col-sm-5 col-lg-6">
+    <div class="col-md-7 col-sm-5 col-lg-6 align-items-center d-flex justify-content-center">
       <div class="card-body " id="cardBdy">
-        <h1 class="card-title text-light text-center">Thank you for your query</h1>
-         <img src="/Images/checkedform.jpg">
+        <h1 class="card-title text-dark text-center">Thank you for your query</h1>
+        <img src="/images/checkedForm.jpg" class="mx-auto d-block" alt="checked_circle">
+        <div class="container bg-secondary">
+            <!--Query Data Injected here-->
+           <h3>
+             
+           {{query}}
+           </h3>
+        </div>
       </div>
     </div>
   </div> 
+ </div>

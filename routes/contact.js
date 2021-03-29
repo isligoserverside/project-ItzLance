@@ -1,21 +1,29 @@
 const express = require('express');
+const bodyParser= require('body-parser');
+const { query } = require('express');
 const router = express.Router();
+session = require('express-session');
+
+
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 router.get('/',(req,res)=>{
-    let fname = req.query.firstname;
-    let sname = req.query.surname;
-    let selec = req.query.selection;
-    let rad = req.query.radio;
-    console.log(`Data Entered ${fname} ${sname} ${selec} ${rad}`);
-    let data = {}
-      res.render('contactUs');
+res.render('contactUs');
 });
-// router.post('/', (req, res) => {
-//     console.log("Data received from a  post");
-//     console.table(req.body);
-//     req.session.flash = 
-//     { type: 'success', intro: 'Data Saved:', message:  "Data for <strong>" + req.body.firstname + " " + req.body.surname + "</strong> has been added"}
-//     res.redirect(303, '/staff')
-//  });
+
+router.post('/',urlencodedParser,(req,res)=>{
+req.session.data = { query: req.body.firstname + " " + req.body.surname + " " + req.body.email + " " + req.body.query};
+res.redirect(303, '/contact/formQuery');
+});
+
+router.get('/formQuery',urlencodedParser,(req, res) => {
+  if (req.session.data) {
+      var userQuery = req.session.data.query;
+  }else {
+      var userQuery = "";
+  }
+  res.render('formSuccess', {query: userQuery});
+  console.log(query);
+});
 
 module.exports=router;
