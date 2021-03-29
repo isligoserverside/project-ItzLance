@@ -69,6 +69,12 @@ background-attachment: fixed;
 .psText{
   font-size: 1.5rem!important;
 }
+.carouselStyle{
+  background-color: black!important;
+}
+.carousel-img{
+  border-radius: 500px;
+}
 .cardStyle{
 border-radius: 50px!important;  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
@@ -93,12 +99,13 @@ background-color: #0a0a0a
 background: linear-gradient(-45deg,#000000,#00123d,#001a59,#002275,#00298c,#0030a3,#0035b3,#002782,#001f66,#001647,#000b24,#00030a);
 background-size: 400%;
 animation-delay: 0s;
-animation: change 3s ease-in-out infinite;  
+animation: change 25s ease-in-out infinite;  
 }
 #headerBar{
   border-bottom-left-radius: 50px!important;
   border-bottom-right-radius: 50px!important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+  padding-top: 5%!important;
 }
 #galleryCard{
   background-color: #000000;
@@ -120,6 +127,9 @@ border: 0px;
   transition-delay:0.1s;
   transform: scale(1.2);
 }
+.sliderText{
+  font-size: 2rem!important;
+}
 #cookieBar{
   background-color:#424242!important;
   color:white!important;
@@ -140,6 +150,44 @@ border: 0px;
   transition-delay:0.1s;
   transform: scale(1.2);  
 }
+.queryForm{
+  border: 1px solid white;
+  border-radius: 45px!important;
+  padding-top: 2%;
+  padding-bottom:2%;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+
+}
+.queryForm:hover{
+  border-color: linear-gradient(to right,#004ccf, #023da3, #00348f);
+}
+.queryText{
+  border-radius: 25px!important;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+#queryBtn{
+  border-radius: 30px;
+  background-color: #5e5e5e;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  border: 0px!important;  
+}
+#queryBtn:hover{
+  background: linear-gradient(-35deg,#363636,#4f4f4f,#5e5e5e,#707070,#808080,#949292,#a8a8a8);
+  background-size: 400%;
+  border: 0px!important;  
+  animation-delay: 0s;
+  animation: change 5s ease-in-out infinite;
+  color: white!important;
+  transition: 0.5s;
+  transition-delay:0.09s;
+  transform: scale(1.1); 
+}
+.form-info{
+  border-radius: 15px;
+}
+.formWiget{
+  font-size: 1.3rem!important;
+}
 @keyframes change {
   0%{
       background-position: 0 50%;
@@ -155,6 +203,9 @@ border: 0px;
 .cardBtn{
   font-size:2vw!important;
 }
+#headerBar{
+  padding-top: 10%!important;
+}
 }
 @media(max-width: 992px) {
   .cardBtn{
@@ -163,6 +214,9 @@ border: 0px;
   .cardTitleStyle{
     font-size: 1rem!important;
   }
+  #headerBar{
+    padding-top: 8%!important;
+  }
 }
 @media(max-width:768px){
 .cardBtn{
@@ -170,5 +224,8 @@ border: 0px;
    }
    .cardTitleStyle{
     font-size: 1.7rem!important;
+  }
+  #headerBar{
+    padding-top: 15%!important;
   }
 }
