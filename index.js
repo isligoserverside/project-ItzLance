@@ -40,7 +40,8 @@ app.get('/',(req,res)=>{
 app.use('/gallery', require('./routes/gallery'));
 app.use('/about', require('./routes/about'));
 app.use('/contact', require('./routes/contact'));
-
+app.use('/login', require('./routes/login'));
+//app.use('/login', require('./routes/login'));
 app.use((req,res) => {
     res.type('text/plain');
     res.status(404);

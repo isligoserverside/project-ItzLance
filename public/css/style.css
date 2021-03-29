@@ -188,6 +188,16 @@ border: 0px;
 .formWiget{
   font-size: 1.3rem!important;
 }
+.userForm{
+  background-color: black!important;
+}
+.userFormText{
+  font-size: 1.5rem;
+}
+.checkbtn{
+  font-size: 50%;
+}
+
 @keyframes change {
   0%{
       background-position: 0 50%;
