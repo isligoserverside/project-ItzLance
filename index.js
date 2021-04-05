@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser= require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const sessionStore = new session.MemoryStore();
 const {flashMiddleware} = require('./lib/session');
 const app = express();
 const port = 5000;
@@ -12,12 +13,18 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static('public/images'));
 app.use(express.static('public'));
+
+//Cookie
 app.use(cookieParser("Lances Cookie"));
+
+app.use(express.urlencoded({extended:false}));
+
+//Session
 app.use(session(
     {secret: "Lances Cookie", 
     cookie: { maxage: 6000},
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
 }));
 
 const logger = (req,res,next)=>{
