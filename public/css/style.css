@@ -78,7 +78,7 @@ background-attachment: fixed;
 .cardStyle{
 border-radius: 50px!important;  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
-  background: linear-gradient(-35deg,#a3a3a3,#b5b3b3,#c9c9c9,#d1d1d1,#dbdbdb,#e0e0e0,#ebebeb,#fcfcfc);
+  background-color: #000000;
 background-size: 400%;
 animation-delay: 0s;
 animation: change 5s ease-in-out infinite;  
@@ -93,7 +93,7 @@ animation: change 5s ease-in-out infinite;
   animation: change 10s ease-in-out infinite;
 }
 #galleryBody{
-background-color: #0a0a0a
+background-color: #f5f5f5; /*THIS WAN*/
 }
 #galleryHeader{
 background: linear-gradient(-45deg,#000000,#00123d,#001a59,#002275,#00298c,#0030a3,#0035b3,#002782,#001f66,#001647,#000b24,#00030a);
@@ -110,11 +110,15 @@ animation: change 25s ease-in-out infinite;
 #galleryCard{
   background-color: #000000;
 }
+.cardTitleStyle{
+  color: white!important;
+}
 .cardBtn{
 border-radius: 80px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
 background-color: #b3b3b3!important;
 border: 0px;
+color: black!important;
 }
 .cardBtn:hover{
   background: linear-gradient(-45deg,#000000,#00123d,#001a59,#002275,#00298c,#0030a3,#0035b3,#002782,#001f66,#001647,#000b24,#00030a);;
@@ -126,6 +130,7 @@ border: 0px;
   transition: 0.5s;
   transition-delay:0.1s;
   transform: scale(1.2);
+  color: black!important;
 }
 .sliderText{
   font-size: 2rem!important;

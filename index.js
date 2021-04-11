@@ -1,7 +1,9 @@
-const express = require('express')
+const express = require('express');
+const multer = require('multer');
 const bodyParser= require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const path = require('path');
 const sessionStore = new session.MemoryStore();
 const {flashMiddleware} = require('./lib/session');
 const app = express();
