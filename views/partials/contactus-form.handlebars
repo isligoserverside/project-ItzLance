@@ -1,0 +1,23 @@
+ <form method="POST">
+        <div class="form-group">
+          <label for='surname' class="ml-3">First Name</label>
+        <input type=text id='surname' name='firstname' class='form-control queryForm' placeholder="example John">
+        </div>
+       <div class="form-group">
+         <label class="ml-3" for="surname">Last Name</label>
+        <input type="lastname" class="form-control queryForm" name="surname" id="lnameForm" placeholder="example Doe">
+       </div>
+         <div class="form-group">
+           <label class="ml-3" for="email">Email</label>
+       <input type="email" class="form-control queryForm" name="email" id="eform" aria-describedby="emailHelp" placeholder="example johndoe@mail.com">
+       <small id="emailHelp" class="form-text text-muted ml-3">Your email will be kept private</small>
+      </div>
+        <div class="form-group">
+          <label class="ml-3" for="lastname">Your Query</label>
+      <textarea class="form-control queryText" id="textAreaForm" name="query" maxlength="850" rows="7" placeholder="Your Query Here..."></textarea>
+     </div>
+      <div class="container d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary btn-lg pl-5 pr-5" id="queryBtn">Submit Query</button>
+      </div>
+      {{>form-info}}
+     </form>
