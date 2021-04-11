@@ -3,10 +3,6 @@ const multer = require('multer');
 const bodyParser= require('body-parser');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-<<<<<<< HEAD
-const path = require('path');
-=======
->>>>>>> ee56a85a46d7194b4a6399cc33b51ccf785ef02e
 const sessionStore = new session.MemoryStore();
 const {flashMiddleware} = require('./lib/session');
 const app = express();
