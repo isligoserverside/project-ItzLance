@@ -3,6 +3,8 @@ const bodyParser= require('body-parser');
 const { query } = require('express');
 const router = express.Router();
 session = require('express-session');
+const AWS = require('aws-sdk');
+const config = require('../lib/dynamoDB');
 
 
 const urlencodedParser = bodyParser.urlencoded({ extended: false })

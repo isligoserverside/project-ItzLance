@@ -1,28 +1,22 @@
 const express = require('express');
-const multer = require('multer');
 const router = express.Router();
+const bodyParser= require('body-parser');
 const galleryData = require('../lib/galleryData');
-const path = require('path');
+const multer = require('multer');
 
-const storage = multer.diskStorage({
-   destination: '../uploads',
-   filename: function(req, file, cb){
-     cb(null,file.fieldname + '-' + Date.now() + 
-     path.extname(file.originalname));
+const urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+const uploaderEngine = multer.diskStorage({
+   destination: "./public/uploads",
+   filename: (req, file, cb) => {
+     cb(null, Date.now() + "--" + file.originalname)
    }
  });
- 
- const upload = multer({
-   storage: storage,
-   limits:{fileSize: 1000000},
-   fileFilter: function(req, file, cb){
-     checkFileType(file, cb);
-   }
- }).single('fileUpload');
+const upload = multer({ storage: uploaderEngine });
 
 router.get('/',(req,res)=>{
     res.render('gallery',{PSGallery: galleryData});
-    });
+});
 
 router.get('/:name',(req,res)=>{
         let name = req.params.name;
@@ -33,14 +27,13 @@ router.get('/:name',(req,res)=>{
             res.type('text/plain');
             res.send('Server 404 Error');
          }
-      });
+});
 
-router.post('/', (req, res) => {
-   upload(req, res, (err) => {
-         res.redirect('/gallery', {
-           msg: 'File Uploaded!',
-           file: `uploads/${req.file.filename}`
-    });
- })});
+router.post('/', upload.single("fileUpload"), (req, res)=>{
+      console.log(req.file);
+      res.redirect(303,'/gallery')
+});
+
+
 
 module.exports = router;

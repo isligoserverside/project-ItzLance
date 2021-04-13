@@ -77,14 +77,16 @@ background-attachment: fixed;
 }
 .cardStyle{
 border-radius: 50px!important;  
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
-  background-color: #000000;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
+background-color: #ffffff;
 background-size: 400%;
 animation-delay: 0s;
-animation: change 5s ease-in-out infinite;  
+animation: change 5s ease-in-out infinite;
+padding: 0;  
 }
 .cardImg{
   border-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)!important;
 }
 .body-style{
   background: linear-gradient(-45deg,#ffffff,#f5f5f5,#e3e3e3,#d4d4d4,#c9c9c9,#bababa);
@@ -111,7 +113,7 @@ animation: change 25s ease-in-out infinite;
   background-color: #000000;
 }
 .cardTitleStyle{
-  color: white!important;
+  color: #272727!important;
 }
 .cardBtn{
 border-radius: 80px;
@@ -130,7 +132,7 @@ color: black!important;
   transition: 0.5s;
   transition-delay:0.1s;
   transform: scale(1.2);
-  color: black!important;
+  color: white;
 }
 .sliderText{
   font-size: 2rem!important;
@@ -201,6 +203,22 @@ color: black!important;
 }
 .checkbtn{
   font-size: 50%;
+}
+.file-input{
+  border-radius: 50px!important;
+  box-shadow: 0 5px 15px rgba(0,0,0,.5);
+  border: 0;
+}
+.gallery-btn{
+  border-radius: 0px, 50px, 50px, 0px!important;
+  background-color: #a7a6a6!important;
+  color: white;
+  border: 0px;
+}
+.gallery-btn:hover{
+  background-color: #3f3f3f!important;
+  transform: scale(1.1); 
+  transition: 0.5s
 }
 
 @keyframes change {
