@@ -281,4 +281,7 @@ color: black!important;
   #headerBar{
     padding-top: 15%!important;
   }
+  .cookieMsg{
+    font-size: 2.9vw;
+  }
 }
