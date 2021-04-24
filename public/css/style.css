@@ -220,6 +220,26 @@ color: black!important;
   transform: scale(1.1); 
   transition: 0.5s
 }
+.dbEdit{
+  border-radius: 25px!important;
+  background-color: #bababa;
+  border: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,.5);
+}
+.dbDelete{
+  border-radius: 25px!important;
+  box-shadow: 0 2px 10px rgba(0,0,0,.5);
+}
+
+.dbEdit:hover{
+  border-radius: 25px!important;
+  background-color: #5f5f5f;
+  color: white;
+  transition: 0.5s;
+}
+.carouselStyler{
+  background-color: black!important;
+}
 
 @keyframes change {
   0%{

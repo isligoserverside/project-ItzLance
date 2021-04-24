@@ -26,30 +26,19 @@ router.post('/', upload.single('uploader'), (req, res) => {
    res.redirect(303,'/gallery')
 });
 
-// router.get('/:name',(req,res)=>{
-//         let name = req.params.name;
-//          if(galleryData[name]){
-//             res.render('PlayStationGallery',{PSGallery: galleryData[name]});
-//             console.log(`${name}`);
-//          }else{
-//             res.type('text/plain');
-//             res.send('Server 404 Error');
-//          }
-// });
+//Route for displaying a specific PlayStation generations content
 router.get('/:name',async(req,res)=>{
    let name = req.params.name;
    let psData = await PSMongo.readPS({ name: name });
    console.table(psData);
-   // if(personData[name]){
-   //    res.render('person',{person: personData[name]});
    if (psData[0]) {
       res.render('PlayStationGallery',{PSGallery: psData[0]});
    }else{
-      res.type('text/plain');
-      res.send('Server 404 Error');
+     res.render('404');
    }
 });
 
+//Route for editing 
 router.get('/:name/edit', async (req, res) => {
    var name = req.params.name;
    var data = await PSMongo.readPS({ name: name });
@@ -71,7 +60,23 @@ router.post('/:name/edit', async (req, res) => {
                { type: 'danger', intro: 'Data not Edited:', message: "Editing failed" }
            res.redirect('/gallery')
        });
-})
+});
+router.get('/:name/delete', async (req, res) => {
+   var name = req.params.name;
+
+   await PSMongo.deletePS(name)
+       .then(() => {
+           req.session.flash =
+               { type: 'success', intro: 'Data Removed:', message: "<strong>" + name + "</strong> has been removed" }
+           res.redirect('/gallery')
+       })
+       .catch(() => {
+           req.session.flash =
+               { type: 'danger', intro: 'Data not Removed:', message: "<strong>" + name + "</strong> has not been removed" }
+           res.redirect('/gallery')
+       });
+});
+
 
 //File Upload Post Request
 
