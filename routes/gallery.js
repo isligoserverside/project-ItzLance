@@ -14,14 +14,16 @@ const uploaderEngine = multer.diskStorage({
      cb(null, Date.now() + "--" + file.originalname)
    }
  });
+
  //Speicifying where the file needs to go
-const upload = multer({ storage: uploaderEngine });
+ const upload = multer({ storage: uploaderEngine });
 
 router.get('/',(req,res)=>{
     res.render('gallery',{PSGallery: galleryData});
 });
 
-router.post('/', upload.single('uploader'), (req, res) => {
+//redirects after an upload event occurs 
+router.post('/', upload.single("fileUpload"), (req, res) => {
    console.log(req.file);
    res.redirect(303,'/gallery')
 });
