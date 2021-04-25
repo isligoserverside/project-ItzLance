@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+//Home route of application
 router.get('/',(req,res)=>{
      // res.render('home',{playstation: psData});
      var message = "";

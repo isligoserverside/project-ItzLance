@@ -7,6 +7,7 @@ const {flashMiddleware} = require('./lib/session');
 const app = express();
 const port = 5000;
 
+//Specifying which layout engine to use
 var handlebars = require('express-handlebars')
 .create({ defaultLayout:'main' });
 app.engine('handlebars', handlebars.engine);
@@ -19,7 +20,7 @@ app.use(cookieParser("Lances Cookie"));
 
 app.use(express.urlencoded({extended:false}));
 
-//Session
+//Session 
 app.use(session(
     {secret: "Lances Cookie", 
     cookie: { maxage: 6000},
@@ -27,12 +28,14 @@ app.use(session(
     saveUninitialized: false,
 }));
 
+//Logging our events
 const logger = (req,res,next)=>{
     console.log('Logged');
     next();
 }
 app.use(logger);
 app.use(flashMiddleware);
+//Default route when application loads
 app.get('/',(req,res)=>{
     // res.render('home',{playstation: psData});
     var message = "";
@@ -44,17 +47,19 @@ app.get('/',(req,res)=>{
     res.cookie('tracking',currentDate.toDateString(), {signed : true});
     res.render('home', {'message': message});
 });
+//Routes that display other parts of the applicaton
 app.use('/gallery', require('./routes/gallery'));
 app.use('/about', require('./routes/about'));
 app.use('/contact', require('./routes/contact'));
 app.use('/login', require('./routes/login'));
-//app.use('/login', require('./routes/login'));
+
+//Server 404 error route
 app.use((req,res) => {
     res.type('text/plain');
     res.status(404);
     res.send('404 - Not Found');
 });
-
+//Server 500 error route
 app.use((err,req,res,next) => {
     console.error(err.stack);
     res.type('text/plain');
