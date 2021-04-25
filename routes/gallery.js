@@ -48,6 +48,7 @@ router.get('/:name/edit', async (req, res) => {
    res.render('PlayStationEdit', { person: data[0] })
 });
 
+//Edit route for editing items
 router.post('/:name/edit', async (req, res) => {
    console.log("Data received from a Edit post");
    console.table(req.body);
@@ -63,6 +64,7 @@ router.post('/:name/edit', async (req, res) => {
            res.redirect('/gallery')
        });
 });
+//Delete route for deleting items
 router.get('/:name/delete', async (req, res) => {
    var name = req.params.name;
 
@@ -83,5 +85,5 @@ router.get('/:name/delete', async (req, res) => {
 //File Upload Post Request
 
 
-
+//Exporting router to index.js route
 module.exports = router;
