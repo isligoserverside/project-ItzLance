@@ -51,7 +51,6 @@ app.get('/',(req,res)=>{
 app.use('/gallery', require('./routes/gallery'));
 app.use('/about', require('./routes/about'));
 app.use('/contact', require('./routes/contact'));
-app.use('/login', require('./routes/login'));
 
 //Server 404 error route
 app.use((req,res) => {
